@@ -31,6 +31,8 @@ a_list = image.xpath("//a/@href")
 
 os.system("mkdir 1")
 
+os.system("ls -l")
+
 
 for each in image_list:
 	#print each
