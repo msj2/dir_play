@@ -1,0 +1,3 @@
+#/usr/bin/python
+
+subprocess.call(["mkdir m1", "-v"])
