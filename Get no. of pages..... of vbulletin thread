@@ -1,0 +1,30 @@
+#   Get no. of pages..... of vbulletin thread
+#<td class="vbmenu_control" style="font-weight:normal">Page 1 of 10</td>
+
+
+import lxml.html
+import string
+from pyquery import PyQuery
+#Read URL  from a file
+#Use lxml.html.parse and xpath to get images into a list
+
+from sys import argv
+script, input_file = argv
+
+#or with stripping the newline character:
+
+#lines = [line.rstrip('\n') for line in open('input_file')]
+
+image = lxml.html.parse(input_file)
+li = image.xpath("//td/@class")
+
+doc = PyQuery(input_file)
+
+i = 2
+for td in doc("table.vbmenu_control").find("vbmenu_control"):
+    i = i + 1
+    print i,  td.text,  'and',td.getnext().text
+
+
+for each in li:
+    print each
