@@ -1,3 +1,5 @@
 #/usr/bin/python
 
 subprocess.call(["mkdir m1", "-v"])
+#verbose mode to show details on screen
+# Che, just to start a streak, Have I done wrong.. or did I miss a step before doing git stash pop ??
